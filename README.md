@@ -65,6 +65,33 @@ java root.main.Sjavac your_file.sjava
 2 - Invalid number of command line arguments or file not found.
 ```
 
+Example:\
+Given the following sjava file:
+```sh
+// some int member
+final int a = 5;
+
+//Another int member
+final int b = a;
+
+// now - a string member
+String s;
+
+void boo(int a, int b, String s) {
+	if (true) {
+		boo(1,2,"hello");
+		while (false) {
+			soo(true);
+		}
+	}
+	return;
+}
+
+void soo(boolean b) {
+	return;
+}
+```
+The Program will end with exit code '0' (Successful execution), meaning that the structure and syntax of the text in this file is valid. 
 
 # Design
 
